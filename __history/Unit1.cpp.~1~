@@ -1,0 +1,39 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+
+
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	  Form1->Canvas->Brush->Color = clSilver;
+
+	  Form1->Canvas->Ellipse(110, 50, 60, 80); //left
+	  Form1->Canvas->Ellipse(170, 50, 120, 80); //right
+	  Form1->Canvas->Ellipse(150, 50, 80, 120);// head
+
+
+	  Form1->Canvas->Ellipse(40, 150, 100, 190); //hands
+	  Form1->Canvas->Ellipse(130, 150, 190, 190);
+
+	  Form1->Canvas->Ellipse(40, 300, 100, 340); //legs
+	  Form1->Canvas->Ellipse(130, 300, 190, 340);
+
+	  Form1->Canvas->Ellipse(60, 120, 170, 320);//body
+
+
+}
+//---------------------------------------------------------------------------

@@ -1,0 +1,41 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+
+
+
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+	  int p[][];
+	  Form1->Canvas->Brush->Color = clTeal;
+	  Form1->Canvas->Ellipse(100, 50, 165, 130);// head
+
+	  Form1->Canvas->Brush->Color = clTeal;
+	  Form1->Canvas->Ellipse(20, 140, 140, 190); //hands
+	  Form1->Canvas->Ellipse(130, 140, 250, 190);
+
+	  Form1->Canvas->Ellipse(60, 300, 120, 340); //legs
+	  Form1->Canvas->Ellipse(150, 300, 210, 340);
+	  Form1->Canvas->Brush->Color = clGreen;
+	  Form1->Canvas->Ellipse(60, 120, 210, 320);//body
+
+	  р[0].х = 100; р[0].у = 100; // начало
+	  р[1].х = 100; р[1].у = 150; // точка перегиба
+	  р[2].х = 150; р[2].у = 150; // точка перегиба
+	  р[3].х = 150; р[3].у = 100; // конец
+		Image1->Canvas->Polyline(р,3);
+}
+//---------------------------------------------------------------------------
